@@ -12,7 +12,7 @@ namespace pd_2
         {
             double P, a = 0, b = 0, c = 0;
 
-            Console.WriteLine("Ievadiet trijstura malu garumus: ");
+            Console.WriteLine("Ievadiet trijstūra malu garumus: ");
             Console.Write("1) ");
             a = Convert.ToDouble(Console.ReadLine());
 
@@ -29,13 +29,38 @@ namespace pd_2
             }
             else
             {
-                Console.WriteLine("Kļūda!");
+                Console.WriteLine("Kļūda! Pie perimetra netiksi.");
             }
         }
 
-        public void Masivs()
+        public void MasivsAprekiniem()
         {
+            string[] Masivs = new string[3];
+            double a, b;
 
+            Console.WriteLine("Ievadiet izteiksmi!");
+
+            for (int i = 0; i < 3; i++)
+            {
+                Masivs[i] = Console.ReadLine();
+            }
+
+            a = Convert.ToDouble(Masivs[0]);
+            b = Convert.ToDouble(Masivs[2]);
+
+            if (Masivs[1] == "+")
+            {
+                Console.WriteLine ("Summa: {0}", a + b);
+            }
+
+            else if (Masivs[1] == "-")
+            {
+                Console.WriteLine("Starpība: {0}", a - b);
+            }
+            else
+            {
+                Console.WriteLine("Nav pieejama šāda darbība!");
+            }
         }
     }
 }
